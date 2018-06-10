@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>*</title>
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js"></script>
+<script>
+var data = JSON.parse('{"firmwares": ["1.01", "1.76", "4.05", "4.55", "5.05"], "1.01": ["Playground", "[Back]"], "1.76": ["Playground", "[Back]"], "4.05": ["Enable Updates", "[Back]"], "4.55": ["Enable-Updates", "[Back]"], "5.05": ["App2USB", "Backup", "Disable Updates", "Dumper", "Enable Updates", "FTP", "HEN", "Linux Loader", "Mira+HEN", "Original", "reactPSPlus", "[Back]"], "Host_Version": "0.4.3"}');
+var exploitBase = "/exploits/";
+
+var firmwares = getFirmwares();
+
+window.onload = function() {
+  if(window.location.hash) {
+    firmwareSelected();
+  } else {
+    resetPage();
+  }
+}
+</script>
+</head>
+<body onhashchange="firmwareSelected()">
+<div id="wrapper">
+<div id="contentWrapper">
+<div id="contentHeader">
+<div><h1 id="title">*</h1><a href="./about.html" class="about">About</a></div>
+</div>
+<div id="content">
+<div id="contentBody">
+<h2 id="header">*</h2>
+<div><a href="./exploits/HEN/index.html"><button class="btn btn-main">HEN</button></a><a href="./exploits/Mira+HEN/index.html"><button class="btn btn-main">Mira+HEN</button></a><a href="./exploits/FTP/index.html"><button class="btn btn-main">FTP</button></a></div>
+<div><a href="./exploits/reactPSPlus/index.html"><button class="btn btn-main">reactPSPlus</button></a><a href="./exploits/App2USB/index.html"><button class="btn btn-main">App2USB</button></a><a href="./exploits/Backup/index.html"><button class="btn btn-main">Backup</button></a></div>
+<div><a href="./exploits/Dumper/index.html"><button class="btn btn-main">Dumper</button></a><a href="./exploits/Original/index.html"><button class="btn btn-main">Original</button></a><a href="./exploits/Linux Loader/index.html"><button class="btn btn-main">Linux Loader</button></a></div>
+<div><a href="./exploits/Enable Updates/index.html"><button class="btn btn-main">Enable Updates</button></a><a href="./exploits/Disable Updates/index.html"><button class="btn btn-main">Disable Updates</button> </a></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
