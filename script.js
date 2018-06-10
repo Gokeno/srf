@@ -3,7 +3,7 @@ function isInArray(value, array) {
 }
 
 function updatePage(title, header, buttons) {
-  document.title = title + " | PS4 Exploit Host by Z";
+  document.title = title + " | ExpHost - Z";
   document.getElementById("title").innerHTML = title;
   document.getElementById("header").innerHTML = header;
   document.getElementById("buttons").innerHTML = buttons;
@@ -11,7 +11,7 @@ function updatePage(title, header, buttons) {
 
 function resetPage() {
   history.pushState("", document.title, window.location.pathname + window.location.search);
-  updatePage("Exploit Selection", "5.05", firmwares);
+  updatePage("Exp Selection", "505", firmwares);
 }
 
 function getFirmwares() {
